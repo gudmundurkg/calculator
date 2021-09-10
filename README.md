@@ -1,0 +1,1 @@
+#Þetta er README fæll
