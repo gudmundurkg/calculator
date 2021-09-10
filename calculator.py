@@ -19,42 +19,41 @@ Skoða villuboð
 
 user_str = input("Enter an equation:" )
 
-user_str_split = user_str.split(' ')
-first_str = user_str_split[0]
-second_str = user_str_split[2]
-operator = user_str_split[1]
-
-#Umbreytum strengja inputti í int
-first_float = float(first_str)
-second_float = float(second_str)
-
-
 
 while user_str != "q":
-    if operator != "+" or operator != "-" or operator != "*" or operator != "/":
+
+    #Afmörkum strengja input frá notanda
+    user_str_split = user_str.split(' ')
+    first_str = user_str_split[0]
+    second_str = user_str_split[2]
+    operator = user_str_split[1]
+
+    #Umbreytum str inputti í int
+    first_int = int(first_str)
+    second_int = int(second_str)
+
+    if operator != "+" and operator != "-" and operator != "*" and operator != "/":
         print("Invalid operator")
-    elif operator == "+":
-        sum = first_float + second_float
-        print(sum)
-    elif operator == "-":
-        subtract = first_float - second_float
-        print(subtract)
-    elif operator == "*":
-        multiply = first_float * second_float
-        print(multiply)
-    elif operator == "/":
-        if second_float == 0:
+    elif operator == "+": #Samlagning
+        sum = (first_int + second_int)
+        sum_float = "{:.2f}".format(sum)
+        print(sum_float)
+    elif operator == "-": #Frádráttur
+        subtract = first_int - second_int
+        subtract_float = "{:.2f}".format(subtract)
+        print(subtract_float)
+    elif operator == "*": #Margföldun
+        multiply = first_int * second_int
+        multiply_float = "{:.2f}".format(multiply)
+        print(multiply_float)
+    elif operator == "/": #Deiling
+        if second_int == 0:
             print("Cant divide by 0")
         else:
-            divide = first_float / second_float
-    else:
-        print("Invalid operator")
+            divide = first_int / second_int
+            divide_float = "{:.2f}".format(divide)
+            print(divide_float)
+    user_str = input("Enter an equation:" )
 
-
-
-
-#print (user_str_split)
-
-#Framkvæma reikniaðgerðir
 
 #Villucheck/Villuboða
