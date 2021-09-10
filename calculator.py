@@ -50,18 +50,18 @@ while user_str != "q":
     elif operator == "-": #Frádráttur
         subtract = first_int - second_int
         subtract_float = "{:.2f}".format(subtract)
-        print("Result", subtract_float)
+        print("Result:", subtract_float)
     elif operator == "*": #Margföldun
         multiply = first_int * second_int
         multiply_float = "{:.2f}".format(multiply)
-        print("Result", multiply_float)
+        print("Result:", multiply_float)
     elif operator == "/": #Deiling
         if second_int == 0:
             print("Cant divide by 0")
         else:
             divide = first_int / second_int
             divide_float = "{:.2f}".format(divide)
-            print("Result", divide_float)
+            print("Result:", divide_float)
     user_str = input("Enter an equation: " )
 
 
