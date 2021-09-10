@@ -1,28 +1,14 @@
 """
-Notandi slær endurtekið inn reiknisegð
-    Reiknisegð = (int) (operator) (int)
-þangað til slegið er q
-    while x != "q"
+Höfundur: Guðmundur Kristján
 
-Niðurstaða skrifuð út með 2 aukastöfum
-Leyfilegir virkjar/operatorar:
-    +,-,*,/
-Bara int tölur
-Ef deiling þá má seinni int ekki vera 0
-
-Skoða villuboð
+Forrit sem tekur inn tvær heiltölur og einn virkja.
+Reiknar út skv inntaki.
 """
-#Biðja um streng
-    #Biðja um int
-    #Biðja um reiknisegð
-    #Biðja um int
-
 user_str = input("Enter an equation: " )
-
 
 while user_str != "q":
 
-    #Afmörkum strengja input frá notanda
+    #Afmörkum inntak frá notanda
     user_str_split = user_str.split(' ')
     first_str = user_str_split[0]
     second_str = user_str_split[2]
@@ -36,11 +22,11 @@ while user_str != "q":
         print("Invalid operands")
         user_str = input("Enter an equation: " )
         continue
-    #Umbreytum str inputti í int
+
     first_int = int(first_str)
     second_int = int(second_str)
 
-    
+    #Reiknivél
     if operator != "+" and operator != "-" and operator != "*" and operator != "/":
         print("Invalid operator")
     elif operator == "+": #Samlagning
@@ -57,12 +43,11 @@ while user_str != "q":
         print("Result:", multiply_float)
     elif operator == "/": #Deiling
         if second_int == 0:
-            print("Cant divide by 0")
+            print("Can't divide by 0")
         else:
             divide = first_int / second_int
             divide_float = "{:.2f}".format(divide)
             print("Result:", divide_float)
+
     user_str = input("Enter an equation: " )
 
-
-#Villucheck/Villuboða
