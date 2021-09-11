@@ -31,23 +31,23 @@ while user_str != "q":
         print("Invalid operator")
     elif operator == "+": #Samlagning
         sum = (first_int + second_int)
-        sum_float = "{:.2f}".format(sum)
-        print("Result:", sum_float)
+        sum_final = "{:.2f}".format(sum)
+        print("Result:", sum_final)
     elif operator == "-": #Frádráttur
         subtract = first_int - second_int
-        subtract_float = "{:.2f}".format(subtract)
-        print("Result:", subtract_float)
+        subtract_final = "{:.2f}".format(subtract)
+        print("Result:", subtract_final)
     elif operator == "*": #Margföldun
         multiply = first_int * second_int
-        multiply_float = "{:.2f}".format(multiply)
-        print("Result:", multiply_float)
+        multiply_final = "{:.2f}".format(multiply)
+        print("Result:", multiply_final)
     elif operator == "/": #Deiling
         if second_int == 0:
             print("Can't divide by 0")
         else:
             divide = first_int / second_int
-            divide_float = "{:.2f}".format(divide)
-            print("Result:", divide_float)
+            divide_final = "{:.2f}".format(divide)
+            print("Result:", divide_final)
 
     user_str = input("Enter an equation: " )
 
